@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sussex County Mapping</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="images/sussex-seal.png">
+    <link rel="stylesheet" href="//js.arcgis.com/3.20/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" href="//js.arcgis.com/3.20/esri/css/esri.css" />
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.10.3/dijit/themes/tundra/tundra.css" />
+    <link rel="stylesheet" href="//js.arcgis.com/3.20/dojo/resources/dojo.css" />
+    <link rel="stylesheet" href="//js.arcgis.com/3.20/dgrid/css/dgrid.css" />
+    <link rel="stylesheet" href="https://js.arcgis.com/3.20/dijit/themes/tundra/tundra.css" />
+    <link rel="stylesheet" href="//js.arcgis.com/3.20/esri/css/esri.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.8/js/dojo/dojox/layout/resources/FloatingPane.css" />
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.8/js/dojo/dojox/layout/resources/ResizeHandle.css" />
+    <link rel="stylesheet" type="text/css" href="Content/Site.css" />
+    <script src="Scripts/spin.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="//js.arcgis.com/3.20/"></script>
+    <script src="Scripts/MapObjects.js"></script>
+    <script src="Scripts/MapCode.js"></script>
+</head>
+<body class="tundra">
+    <!--<div id="warning"><h1>This site is only view-able on screens 750px or wider.</h1><p>Please switch to a tablet or desktop device to view.</p></div>-->
+    <div id="disclaimer" style="display:none; width:50%; font-size:1.3em; line-height:1.5" data-dojo-type="dijit/Dialog" data-dojo-id="disclaimer" title="Disclaimer">
+        <p>The information provided on this site is for convenience and reference only. In the preparation of this site, extensive efforts have been made to offer the most current, correct, and clearly expressed information possible. However, errors can occur, and information placed on the County Mapping pages does not replace the official records. The public records should be reviewed to verify the information provided on these pages. The use of any of this information is at your own risk. Neither Sussex County nor its employees, agents, or contractors assume any legal responsibility for the information contained herein, which is provided "as is" with no warranties of any kind. Sussex County disclaims all liability of any kind arising out of the use of, or misuse of, this information and disclaims all express or implied warranties, including warranties of merchantability, fitness for a particular purpose, and non-infringement of proprietary rights. Neither Sussex County nor its employees, agents, or contractors will be liable for any actions, claims, damages or judgments of any nature whatsoever arising out of the use or misuse of the information contained in these County Mapping pages.</p>
+        <div class="dijitDialogPaneActionBar" style="margin-top:40px">
+            <button data-dojo-type="dijit/form/Button" type="submit" onclick="return disclaimer.hide();">Accept</button>
+            <button data-dojo-type="dijit/form/Button" type="button" onclick="return redirect();">Decline</button>
+        </div>
+
+    </div>
+    <div id="divMain">
+        <!-- Header -->
+        <header>
+            <span id="SussexCoLogo" >
+                <img alt="" src="images/sussex-brand2.png" height="54" />
+            </span>
+
+            <!-- Header Functions -->
+            <div id="header-functions">
+                <ul id=headerButtons>
+                    <!-- Printing -->
+                    <li class="hide-mobile">
+                        <span class="button widget-button" title="printWidget">
+                            <span class="icon-print vertical-align-middle"></span>
+                            <span class="vertical-align-middle hide-mobile">Print</span>
+                        </span>
+                        <div id="printWidget" class="widget">
+                            <h2>
+                                <span>Print</span>
+                                <span class="close-widget icon-close"></span>
+                            </h2>
+                            <table style="width:95%; margin:5px">
+                                <tr class="print-parcel-options" style="border:none">
+                                    <td style="border:none; width:100px">Show Parcel Details?</td>
+                                </tr>
+                                <tr class="print-parcel-options">
+                                    <td>
+
+                                            <label style="float:left;font-size: 13.3333px;" for="rbPrintParcelsYes"><input name="pp" type="radio" checked id="rbPrintParcelsYes" style="margin-left:5px; margin-right:5px;" />Yes</label>
+
+                                            <label  style="float:left; margin-left:20px; font-size: 13.3333px;" for="rbPrintParcelsNo"><input name="pp" type="radio" style="margin-left:5px; margin-right:5px;" id="rbPrintParcelsNo" value="No" />No</label>
+
+                                      
+                                    </td>
+                                    
+                                </tr>
+                                <tr class="no-print-parcel-template" style="border:none">
+                                    <td style="border:none; width:100px">Template</td>
+                                </tr>
+                                <tr class="no-print-parcel-template">
+                                    <td style="border:none"><select id="selPrintTemplate" style="width:100%" /></td>
+                                </tr>
+                                <tr class="no-print-parcel-template" style="border:none">
+                                    <td style="border:none; width:100px">Format</td>
+                                </tr>
+                                <tr class="no-print-parcel-template">
+                                    <td style="border:none">
+                                        <select id="selPrintFormat" style="width:100%" />
+                                    </td>
+                                </tr>
+                                <tr class="no-print-parcel-template">
+                                    <td colspan="2">
+                                        <button style="width:100%" data-dojo-type="dijit/form/Button" class="printButton" id="btnPrintNoParcel">Print Map</button>
+                                    </td>
+                                </tr>
+                                <tr class="print-parcel-template" style="border:none">
+                                    <td style="border:none; width:100px">Template</td>
+                                </tr>
+                                <tr class="print-parcel-template">
+                                    <td style="border:none; width:100%;"><select id="selPrintParcelTemplate" style="width:100%" /></td>
+                                </tr>
+                                <tr class="print-parcel-template" style="border:none">
+                                    <td style="border:none; width:100px">Format</td>
+                                </tr>
+                                <tr class="print-parcel-template">
+                                    <td style="border:none">
+                                        <select id="selPrintParcelFormat" style="width:100%" />
+                                    </td>
+                                </tr>
+                                <tr class="print-parcel-template">
+                                    <td colspan="2">
+                                        <button style="width:100%" data-dojo-type="dijit/form/Button" class="printButton" id="btnPrintParcel">Print Parcel Map</button>
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                    </li>
+                    <!-- Help -->
+                    <li>
+                        <a class="button" href="http://www.sussexcountyde.gov/sites/default/files/OnlineMap_GUIDE.pdf" target="_blank">
+                            <span class="icon-help vertical-align-middle"></span>
+                            <span class="vertical-align-middle hide-mobile">Help</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section id="map-functions">
+            <ul>
+                <li>
+                    <span class="button widget-button visible active" title="layerVisibility"><span class="icon-layers vertical-align-middle"></span><span class="vertical-align-middle hide-mobile">Layers</span></span>
+                    <div id="layerVisibility" class="widget visible">
+                        <h2>
+                            <span>Layers</span>
+                            <span class="close-widget icon-close"></span>
+                        </h2>
+                        <div id="divLayerVisibility"></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="button widget-button" title="searchWidget"><span class="icon-search vertical-align-middle"></span><span class="vertical-align-middle hide-mobile">Search</span></span>
+                    <div id="searchWidget" class="widget">
+                        <h2>
+                            <span>Search Parcels</span>
+                            <span class="close-widget icon-close"></span>
+                        </h2>
+
+                        <div class="widget-content">
+                            <div>
+                                <label>Search by:</label>
+                                <select id="selFieldName"></select>
+                            </div>
+
+                            <div>
+                                <label>Search text:</label>
+                                <input type="text" id="txtSearchValue" />
+                            </div>
+
+                            <button id="btnSearch">Search</button>
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <span class="button widget-button" title="basemapGalleryContainer">
+                        <span class="icon-basemap vertical-align-middle"></span>
+                        <span class="vertical-align-middle hide-mobile">Basemaps</span>
+                    </span>
+                    <div class="widget" id="basemapGalleryContainer">
+                        <h2>
+                            <span>Basemaps</span>
+                            <span class="close-widget icon-close"></span>
+                        </h2>
+                        <div id="basemapGallery"></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="button widget-button" id="select-button" data-active="false">
+                        <span class="icon-mouse-pointer vertical-align-middle">
+                        </span>
+                        <span class="vertical-align-middle hide-mobile">Select Area</span>
+                    </span>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- Search results -->
+        <button id="searchResultsBtn"><span class="icon-double-chevron-left vertical-align-middle hide-mobile"></span><span class="icon-info show-mobile"></span><span class="vertical-align-middle hide-mobile">Search Results</span></button>
+
+        <div id="search-results">
+            <div id="close-results" class="white dark-gray-bg"><span class="vertical-align-middle">Hide search results</span> <span class="icon-double-chevron-right vertical-align-middle"></span></div>
+
+            <h2>
+                <span>Search results</span>
+
+                <a id="btnClearSelected">Clear Selected</a>
+            </h2>
+            <div id="accordionHeadingContainer">
+                <span id="accordionHeading">Selected Features:</span>
+                <select id="selResultsLayer" name="selResultsLayer" disabled style="width:50%;margin-right:5px; float:right"></select>
+            </div>
+            <div data-dojo-type="dijit/layout/AccordionContainer" id="divApplicationDetails"></div>
+            <div id="divMoveNext">
+                <div data-dojo-type="dijit/form/Button" id="btnMoveToStart" data-dojo-props="iconClass:'moveToStartIcon'"></div>
+                <div data-dojo-type="dijit/form/Button" id="btnMovePreviousPage" data-dojo-props="iconClass:'movePreviousIcon'"></div>
+                <div data-dojo-type="dijit/form/Button" id="btnMovePreviousFeature" data-dojo-props="iconClass:'moveUpIcon'"></div>
+                <div data-dojo-type="dijit/form/Button" id="btnMoveNextFeature" data-dojo-props="iconClass:'moveDownIcon'"></div>
+                <div data-dojo-type="dijit/form/Button" id="btnMoveNextPage" data-dojo-props="iconClass:'moveNextIcon'"></div>
+                <div data-dojo-type="dijit/form/Button" id="btnMoveToEnd" data-dojo-props="iconClass:'moveToEndIcon'"></div><br />
+                <span id="spanSelectedApplications">No Features Selected</span>
+            </div>
+        </div>
+
+        <div id="mapDiv"></div>
+    </div>
+
+
+
+
+</body>
+</html>

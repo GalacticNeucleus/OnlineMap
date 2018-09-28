@@ -1,0 +1,1096 @@
+﻿/*  FONTS  */
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?o57ax4');
+    src: url('fonts/icomoon.eot?o57ax4#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?o57ax4') format('truetype'), url('fonts/icomoon.woff?o57ax4') format('woff'), url('fonts/icomoon.svg?o57ax4#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mouse-pointer:before {
+    content: "\e90a";
+}
+
+.icon-eye:before {
+    content: "\e909";
+}
+
+.icon-info:before {
+    content: "\e908";
+}
+
+.icon-double-chevron-left:before {
+    content: "\e90b";
+}
+
+.icon-double-chevron-right:before {
+    content: "\e90c";
+}
+
+.icon-close:before {
+    content: "\e907";
+}
+
+.icon-help:before {
+    content: "\e904";
+}
+
+.icon-print:before {
+    content: "\e905";
+}
+
+.icon-search:before {
+    content: "\e906";
+}
+
+.icon-exclamation:before {
+    content: "\e900";
+}
+
+.icon-basemap:before {
+    content: "\e901";
+}
+
+.icon-legend:before {
+    content: "\e902";
+}
+
+.icon-layers:before {
+    content: "\e903";
+}
+
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.print-parcel-options{
+    display:none;
+}
+.print-parcel-template{
+    display:none;
+}
+
+/* #region Site Styles */
+body {
+    background-color:#FEE4B7;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 3px;
+    text-align: left;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#divMain {
+    height: 100%;
+}
+
+input[type="text"] {
+    box-sizing: border-box;
+}
+
+#warning {
+    display:hidden;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color:#aaaaaa;
+    overflow:hidden;
+}
+
+header {
+    background: #293c66;
+}
+
+button, .button {
+    background: #D67E0A;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 1.25em;
+    padding: .25em .5em;
+}
+
+    button.active, .button.active {
+        background: gray;
+    }
+
+    button:not(.active):hover, .button:not(.active):hover {
+        background: #c3740b;
+    }
+
+    /*div.active, .button.active {
+        background: gray;
+    }
+
+    div:not(.active):hover, .button:not(.active):hover {
+        background: #c3740b;
+    }
+
+    span.active {
+        background: gray;
+    }
+
+    span:not(.active):hover {
+        background: #c3740b;
+    }*/
+
+a.button {
+    color: white;
+    text-decoration: none;
+}
+
+#SussexCoLogo {
+    display:block;
+    background-image: url(../Images/sussex-brand2.png);
+    background-repeat:no-repeat;
+    width:412px;
+    height:92px;
+    overflow:hidden;
+}
+
+
+.moveToStartIcon {
+    background-image: url(../images/GenericBlueStartArrowNoTail16.png);
+    width: 16px;
+    height: 16px;
+}
+
+.moveUpIcon {
+    background-image: url(../images/GenericBlueUpArrowLongTail16.png);
+    width: 16px;
+    height: 16px;
+}
+
+.moveDownIcon {
+    background-image: url(../images/GenericBlueDownArrowLongTail16.png);
+    width: 16px;
+    height: 16px;
+}
+
+.moveToEndIcon {
+    background-image: url(../images/GenericBlueEndArrowNoTail16.png);
+    width: 16px;
+    height: 16px;
+}
+
+.movePreviousIcon {
+    background-image: url(../images/GenericBlueLeftArrowNoTail16.png);
+    width: 16px;
+    height: 16px;
+}
+
+.moveNextIcon {
+    background-image: url(../images/GenericBlueRightArrowNoTail16.png);
+    width: 16px;
+    height: 16px;
+}
+
+.zoominIcon {
+    /* Hidden in UI */
+    background-image: url(../Images/button-sprite.png);
+    background-position:-18px 0;
+    width: 18px;
+    height: 18px;
+}
+
+.zoomoutIcon {
+    /* Hidden in UI */
+    background-image: url(../Images/button-sprite.png);
+    background-position:-36px 0;
+    width: 18px;
+    height: 18px;
+}
+
+.panIcon {
+    /* Hidden in UI */
+    background-image: url(../Images/button-sprite.png);
+    background-position:-54px 0;
+    width: 18px;
+    height: 18px;
+}
+
+.identifyIcon {
+    background-image: url(../Images/button-sprite.png);
+    background-position:-90px 0;
+    width: 18px;
+    height: 18px;
+}
+
+/*#btnIdentify:hover:before {
+    content:'Select Multiple';
+    position:absolute;
+    display:block;
+    width:auto;
+    top:20px;
+    left:20px;
+    background:rgba(188,188,188,0.7);
+    padding:2px;
+    z-index:999;
+    border:1px solid #b7b7b7;
+    float:left;
+    font-size:.8em;
+}*/
+/*#btnHelp:hover:after {
+    content:'Online Help';
+    position:absolute;
+    display:block;
+    width:auto;
+    top:20px;
+    left:140px;
+    background:rgba(188,188,188,0.7);
+    padding:2px;
+    z-index:999;
+    border:1px solid #b7b7b7;
+    float:left;
+    font-size:.8em;
+}*/
+.clearIcon {
+    background-image: url(../Images/button-sprite.png);
+    background-position:-72px 0;
+    width: 18px;
+    height: 18px;
+}
+.helpIcon{
+    background-image: url(../Images/HelpSystemBlue16.png);
+    width: 18px;
+    height: 18px;
+}
+/*#btnClearSelected:hover:after {
+    content:'Clear Selection';
+    position:absolute;
+    display:block;
+    width:auto;
+    top:20px;
+    left:75px;
+    background:rgba(188,188,188,0.7);
+    padding:2px;
+    z-index:999;
+    border:1px solid #b7b7b7;
+    float:left;
+    font-size:.8em;
+}*/
+
+.deactivateIcon {
+    /* Hidden in UI */
+    background-image: url(../Images/button-sprite.png);
+    background-position:-54px 0;
+    width: 18px;
+    height: 18px;
+}
+
+.zoomfullextIcon {
+    background-image: url(../Images/button-sprite.png);
+    background-position:-126px 0;
+    width: 18px;
+    height: 18px;
+}
+
+#btnZoomFullExtent:hover:after {
+    content:'Full Map';
+    position:absolute;
+    display:block;
+    width:auto;
+    top:20px;
+    left:120px;
+    background:rgba(188,188,188,0.7);
+    padding:2px;
+    z-index:999;
+    border:1px solid #b7b7b7;
+    float:left;
+    font-size:.8em;
+}
+
+.zoomprevIcon {
+    /* Hidden in UI */
+    background-image: url(../Images/button-sprite.png);
+    background-position:0 0;
+    width: 18px;
+    height: 18px;
+}
+
+.zoomnextIcon {
+    /* Hidden in UI */
+    background-image: url(../Images/button-sprite.png);
+    background-position:0 0;
+    width: 18px;
+    height: 18px;
+}
+
+
+.searchIcon {
+    background-image: url(../Images/button-sprite.png);
+    width: 18px;
+    height: 18px;
+}
+
+
+.dgrid {
+    height: 90%;
+    width: 100%;
+}
+
+#divApplicationDetails .dgrid-column-0 {
+    width: 125px;
+}
+
+.esriLargeSliderTL {
+    right: 30px;
+    top: 50px;
+    left: auto;
+}
+
+#divParcelDetails .dgrid-column-0 {
+    width: 125px;
+}
+
+/* ESRI Overrides */
+.tundra .dijitBorderContainer {
+    background-color:#FEE4B7;
+}
+
+.tundra .dijitGutterH {
+    background-color:#FEE4B7;
+}
+
+.tundra .dijitSplitterV {
+    background-color:#FEE4B7;
+}
+
+.tundra .dijitGutterV {
+    background-color:#FEE4B7;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: none;
+    background: none;
+    color: inherit;
+}
+
+.ui-widget-content {
+     border: none;
+     background: none;
+}
+
+#disclaimer .dijitButtonNode {
+    width:200px;
+}
+
+#disclaimer p {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+/* Search Bar */
+#searchBox {
+    position:absolute;
+    color:#FDD88C;
+    top: 22px;
+    right: 20px;
+}
+
+#searchLabel {
+    font-size:1.3em;
+}
+
+#txtSearchValue, #selFieldName, #selBark {
+    border: 1px solid;
+    color: #777;
+    padding: .25em;
+}
+
+#divNavigation {
+    position: absolute;
+    left: 373px;
+    top: 110px;
+    z-index: 100;
+}
+
+    #divNavigation .dijitButtonNode {
+        font-size: 1.25em;
+        padding: .25em .1em .3em;
+    }
+
+    span[widgetID='btnIdentify'] {
+        margin-left: 1.25em;
+        margin-top: 2px;
+    }
+
+/* Sidebar */
+
+#s-bar {
+    width: 25%;
+    height:100%;
+    overflow-y:hidden; 
+    min-width:350px; 
+    background-color:#FEE4B7; 
+    border:none; 
+    padding-top:0; 
+    padding-left:2px;
+    position: absolute;
+    top: 100px;
+}
+
+#divMoveNext {
+    background: #fff;
+    border: 1px solid #ccc;
+    height:10%;
+    text-align:center;
+}
+
+#spanSelectedApplications {
+    margin-top:3px;
+    font-weight:normal;
+    font-size:1em;
+    color:#5a5a5a;
+}
+
+.dijitAccordionContainer {
+    border-top:1px solid #b7b7b7 !important;
+}
+
+.tundra .dijitAccordionTitleSelected {
+    color: #ffffff;
+    padding-left: 12px;
+    background: #293c66 !important;
+}
+
+.tundra .dijitAccordionTitleSelected span {
+    color:#ffffff !important;
+}
+
+.tundra .dijitAccordionTitle {
+    color:#3b3b3b;
+    padding-left:12px;
+    background:#C8E2FF none repeat-x scroll left bottom;
+}
+
+.tundra .dijitAccordionTitleSelected:before {
+    content:''!important;
+    position:relative;
+    top:4px;
+    left:-3px;
+    float:left;
+    width: 0; 
+	height: 0; 
+	border-left: 4px solid transparent !important;
+	border-right: 4px solid transparent !important;
+	border-top: 6.924px solid #fff !important;
+}
+
+.tundra .dijitAccordionTitle:before {
+    content:'';
+    position:relative;
+    top:4px;
+    left:-3px;
+    float:left;
+    width: 0; 
+	height: 0; 
+	border-left: 6.924px solid #3b3b3b;
+	border-bottom: 4px solid transparent;
+	border-top: 4px solid transparent;
+}
+
+.tundra .dgrid-header, .tundra .dgrid-footer {
+	background: #DBDBDB;
+	 font-weight: bold;
+     border-width: 1px 1px 0 0;
+    border-style: solid solid none none;
+    border-color: #CCC #CCC;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    color: #3B3B3B;
+    font-size: 1em;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
+}
+
+.tundra .dgrid-header th:hover {
+	background: #DBDBDB;
+	 background: -moz-linear-gradient(top, #DBDBDB 0%, #DBDBDB 100%);
+	 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DBDBDB), color-stop(100%,#DBDBDB));
+	 background: -webkit-linear-gradient(top, #DBDBDB 0%,#DBDBDB 100%);
+	 background: -o-linear-gradient(top, #DBDBDB 0%,#DBDBDB 100%);
+	 background: -ms-linear-gradient(top, #DBDBDB 0%,#DBDBDB 100%);
+	 background: linear-gradient(top, #DBDBDB 0%,#DBDBDB 100%);
+}
+
+.dgrid {
+    background-color:#fff;
+    width:100%;
+}
+
+.dgrid-content{
+    width:100%;
+}
+
+#accordionHeadingContainer {
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #CCC;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    color: #3B3B3B;
+    font-size: 1em;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
+    padding:4px;
+}
+
+/* button Customizations */
+.tundra .dijitIcon {
+    margin-left:6px;
+}
+
+.printButton .dijitButtonNode{
+    width:95%;
+}
+
+.tundra .dijitButtonNode, tundra .dijitDisabled {
+    border-radius: 4px;
+    border: none;
+    background: #D67E0A; /* Old browsers */
+    color: #fff;
+}
+
+.tundra .dijitTitlePaneTitle {
+    border-radius: 5px;
+    border: none;
+    background: #D67E0A; /* Old browsers */
+    color: #fff;
+}
+
+.tundra .dijitTitlePaneTextNode {
+    color:#fff
+}
+
+
+/* #endregion */
+
+/* #region Mobile Styles */
+/********************
+*   Mobile Styles   *
+********************/
+@media only screen and (max-width: 1220px) {
+    #SussexCoLogo {
+        width: 312px;
+        /*background-position: -105px 0;*/
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    #SussexCoLogo {
+        width: 211px;
+        background-position: 0 9px;
+        background-size: 100% auto;
+    }
+
+    .tundra .dijitIcon {
+        margin-left:4px;
+    }
+}
+
+
+/* New Style */
+.show-mobile {
+ display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#map-functions {
+    position: absolute;
+    z-index: 50;
+    left: 20px;
+    top: 111px;
+}
+
+#map-functions .button {
+   text-align: center;
+}
+
+#map-functions ul {
+    padding: 0;
+    margin: 0;
+}
+
+#map-functions ul li {
+    display: inline-block;
+}
+
+#map-functions [class^="icon-"]:before {
+    font-size: 1.25em;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#header-functions {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+#header-functions li {
+    display: inline-block;
+    margin-right: 1em;
+    position: relative;
+}
+
+#header-functions .button {
+    text-align: center;
+    text-decoration: none;
+    width: 75px;
+}
+
+.vertical-align-middle {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/* Widgets */
+#identifyWidget {
+    height: 100px;
+}
+
+    #identifyWidget h2 .dijitButtonNode {
+        color: #293c66;
+        cursor: pointer;
+        background: none;
+        font-size: .75em;
+        font-weight: bold;
+        float: right;
+        margin-right: 23px;
+        padding-top: 2px;
+    }
+
+#identifyWidget p {
+    padding: 0 1em;
+}
+
+#identifyWidget #accordionHeadingContainer {
+    background: #fff;
+    margin-top: 0;
+}
+
+
+#search-results {
+    background: #fff;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: calc(100% - 90px);
+    position: absolute;
+    right: 0;
+    top: 90px;
+    width: 400px;
+    z-index: 999;
+    overflow: hidden;
+}
+
+    #search-results h2 {
+        background: #f3f3f3;
+        font-size: 1.5em;
+        font-weight: normal;
+        margin: 0;
+        padding: .25em;
+        overflow: auto;
+    }
+
+        #search-results h2 a {
+            cursor: pointer;
+            float: right;
+            font-size: .7em;
+            color: #293c66;
+            padding-top: .3em;
+        }
+
+    #search-results .icon-double-chevron-right {
+        font-size: 1.5em;
+        padding-top: .2em;
+    }
+
+    #search-results #divApplicationDetails {
+        height: 300px;
+    }
+
+    #search-results #close-results {
+        cursor: pointer;
+        margin: -.25em -.25em 0 -.25em;
+        padding: .4em;
+        text-align: right;
+    }
+
+#searchResultsBtn {
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    z-index: 998;
+}
+
+    #searchResultsBtn .icon-double-chevron-left {
+        font-size: 1.2em;
+        padding-top: .2em;
+        margin-bottom: -.1em;
+    }
+
+
+
+
+#basemapGallery, #basemapGalleryContainer {
+    width: 365px;
+}
+
+#layerVisibility.widget {
+    font-size: .75em;
+    display: block;
+    visibility: hidden;
+    height: 400px;
+}
+
+#layerVisibility.visible {
+    display: block;
+    visibility: visible;
+}
+
+#layerVisibility.visible #divLayerVisibility {
+    display: block !important;
+    visibility: visible;
+}
+
+#layerVisibility .dgrid-header-row, .dgrid-header-scroll {
+    visibility: hidden;
+}
+
+#layerVisibility .dgrid-scroller {
+    margin-top: 0 !important;
+}
+
+.widget {
+    background: #fff;
+    border: 1px solid #808080;
+    display: none;
+    margin-top: .25em;
+    position: absolute;
+    width: 320px;
+    z-index: 1000;
+}
+
+    .widget h2 {
+        background: #808080;
+        border-bottom: 1px solid #808080;
+        color: #fff;
+        font-size: 1.5em;
+        font-weight: normal;
+        margin: 0;
+        padding: .25em;
+    }
+
+    .widget h2 .icon-close {
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+        top: 8px;
+    }
+
+    .widget label {
+        display: block;
+    }
+
+    .widget .widget-content {
+        padding: .5em;
+    }
+
+    .widget .widget-content input[type="text"], .widget .widget-content select {
+        width: 100%;
+    }
+
+    .widget .widget-content > div {
+        padding: .5em 0;
+    }
+
+
+#printWidget {
+    right: 0;
+    width: 250px;
+}
+
+.esriBasemapGalleryLabelContainer {
+    line-height: 1;
+}
+
+/*  MAP  */
+#mapDiv {
+    height: calc(100% - 100px);
+}
+
+
+
+/* Layer Visibiity Widget */
+#divLayerVisibility {
+    visibility: hidden;
+    position: absolute;
+}
+
+#divLayerVisibility .dgrid-row {
+    position: relative;
+}
+
+    #divLayerVisibility .divLayerVisibility-header .dgrid-cell-padding {
+        font-size: 1.5em;
+    }
+    
+    #divLayerVisibility .dgrid-cell-padding {
+        padding: .5em;
+    }
+
+#divLayerVisibility.visible {
+    visibility: visible;
+}
+.info-toggle {
+    position: absolute;
+    cursor: pointer;
+    left: 62px;
+    top: 12px;
+    font-size: .85em;
+    z-index: 1000;
+}
+
+#divLayerVisibility input ~ .icon-info, #divLayerVisibility input ~ .icon-eye {
+    color: lightgray;
+}
+
+#divLayerVisibility input ~ .icon-eye, #divLayerVisibility input ~ .icon-info {
+    font-size: 1.25em;
+}
+
+#divLayerVisibility input:checked ~ .icon-info, #divLayerVisibility input:checked ~ .icon-eye {
+    color: #777;
+}
+
+#divLayerVisibility input {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+#divLayerVisibility .dgrid-expando-icon {
+    margin-left: 0;
+}
+
+#divLayerVisibility .dgrid-cell {
+    line-height: 1;
+}
+
+#divLayerVisibility .ui-state-default .ui-icon {
+    cursor: pointer;
+    float: right !important;
+}
+
+#divLayerVisibility .ui-icon-triangle-1-se {
+    background-position: -48px -128px !important;
+}
+
+#divLayerVisibility .ui-icon-triangle-1-e {
+    background-position: -32px -126px !important;
+}
+
+/*Disclaimer*/
+#disclaimer {
+    width: 500px !important;
+    left: 50% !important;
+    top: 50% !important;
+    margin-left: -250px !important;
+    margin-top: -300px;
+}
+    #disclaimer .dijitDialogTitleBar {
+        width: 100% !important;
+    }
+
+    #disclaimer .dijitDialogPaneActionBar {
+        font-size: 1.25em;
+        text-align: center;
+        width: 100% !important;
+    }
+
+.tundra .dijitDialogTitleBar {
+    background: #f3f3f3;
+}
+
+.tundra .dijitDialogTitle {
+    font-weight: normal;
+}
+
+.tundra .dijitDialogPaneContent {
+    font-size: .85em;
+    box-sizing: border-box;
+    width: 100% !important;
+}
+
+.white {
+    color: white;
+}
+
+.dark-gray-bg {
+    background: #777;
+}
+
+
+
+
+/* Media Queries */
+@media only screen and (max-width: 568px) {
+    /* Tags */
+    header {
+        height: 70px;
+    }
+
+    /* Classes */
+    .full-width-mobile {
+        width: 100%;
+    }
+
+    .hide-mobile {
+        display: none !important;
+    }
+
+    .show-mobile {
+        display: block;
+    }
+
+    .widget {
+        left: 0;
+
+    }
+
+    /* ID */
+    #header-functions {
+        right: 10px;
+        top: -10px;
+    }
+
+        #header-functions .button {
+            background: none;
+            font-size: 3em;
+            width: 0;
+        }
+
+    #mapDiv {
+        height: calc(100% - 70px);
+    }
+
+    #divNavigation {
+        left: 141px;
+        top: 78px;
+    }
+
+    #map-functions {
+        left: 2%;
+        top: 80px;
+        width: 88%;
+    }
+
+    #map-functions ul li > button, #map-functions ul li > .button {
+        font-size: 27px;
+        width: 32px;
+        padding: .25em .25em 0 .25em;
+    }
+
+    #map-functions .button {
+        padding: .25em .25em .15em;
+    }
+
+        #map-functions .icon-basemap:before {
+            margin-left: 3px;
+        }
+
+    #layerVisibility, #basemapGallery, #basemapGalleryContainer {
+        height: 50vh;
+        overflow-y: scroll;
+    }
+
+    #basemapGallery, #basemapGalleryContainer {
+        width: 245px;
+    }
+
+    #search-results {
+        display: none;
+		background: rgb(255, 255, 255, 0.5) !important;
+        height: calc(100% - 70px);
+        top: 70px;
+        width: 90vw;
+    }
+
+    #searchResultsBtn {
+        top: 80px;
+        font-size: 2em;
+        padding: .25em;
+    }
+
+
+    #divNavigation .dijitButtonNode {
+        font-size: 27px;
+        padding: 0 .2em .3em .3em;
+    }
+
+
+    #disclaimer {
+        height: 425px !important;
+        width: 320px !important;
+        margin-left: -160px !important;
+        margin-top: -305px;
+		z-index: 999 !important;
+    }
+
+        #disclaimer p {
+            height: 222px;
+            overflow-y: scroll;
+        }
+
+    .esriLargeSliderTL {
+        top: 75px;
+    }
+	
+		.dijitContentPane {
+width: 100% !important;
+}
+	
+}
+

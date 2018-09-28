@@ -1,0 +1,820 @@
+﻿{
+  "GeometryServiceUrl": "https://maps.sussexcountyde.gov/gis/rest/services/Utilities/Geometry/GeometryServer",
+  "PrintServiceUrl": "https://maps.sussexcountyde.gov/gis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
+  "ParcelPrintServices": [
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/Geoprocessing/A3LandscapParcelDetails/GPServer/Export%20Web%20Map",
+      "DisplayName": "A3 Landscape",
+      "TemplateName": "A3 Landscape Parcel Details"
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/Geoprocessing/A3PortraitParcelDetails/GPServer/Export%20Web%20Map",
+      "DisplayName": "A3 Portrait",
+      "TemplateName": "A3 Portrait Parcel Details"
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/Geoprocessing/A4LandscapeParcelDetails/GPServer/Export%20Web%20Map",
+      "DisplayName": "A4 Landscape",
+      "TemplateName": "A4 Landscape Parcel Details"
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/Geoprocessing/A4PortraitParcelDetails/GPServer/Export%20Web%20Map",
+      "DisplayName": "A4 Portrait",
+      "TemplateName": "A4 Portrait Parcel Details"
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/Geoprocessing/LetterANSIALandscapeParcelDetails/GPServer/Export%20Web%20Map",
+      "DisplayName": "Letter Landscape",
+      "TemplateName": "Letter Landscape Parcel Details"
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/Geoprocessing/LetterANSIAPortraitParcelDetails/GPServer/Export%20Web%20Map",
+      "DisplayName": "Letter Portrait",
+      "TemplateName": "Letter Portrait Parcel Details"
+    }
+  ],
+  "AddressLocatorSearchConfiguration": {
+    "LocatorUrl": "https://firstmap.gis.delaware.gov/arcgis/rest/services/Location/DE_CompositeLocator/GeocodeServer",
+    "SingleLineFieldName": "SingleLine"
+  },
+  "AddressLayerSearchConfiguration": {
+    "Url": "https://maps.sussexcountyde.gov/gis/rest/services/County_Layers/911Addresses/MapServer/0",
+    "SearchFieldName": "Address",
+    "SortFieldName": "HouseNumber"
+  },
+  "AddressPointsSearchConfiguration": {
+    "Url": "https://maps.sussexcountyde.gov/gis/rest/services/County_Layers/911Addresses/MapServer/0",
+    "SearchFields": [
+      "District",
+      "Map",
+      "Parcel",
+      "AssessmentUnit"
+    ],
+    "DisplayFields": [
+      "District",
+      "Map",
+      "Parcel",
+      "AssessmentUnit"
+    ]
+  },
+  "SubdivisionSearchConfiguration": {
+    "Url": "https://maps.sussexcountyde.gov/gis/rest/services/County_Layers/Subdivisions/MapServer/0",
+    "SearchFieldName": "NAME"
+  },
+  "ParcelSearchConfiguration": {
+    "ParcelLayerUrl": "https://maps.sussexcountyde.gov/gis/rest/services/Staging/ParcelsWithOwnership_Staging/MapServer/0",
+    "RelatedTableUrl": "https://maps.sussexcountyde.gov/gis/rest/services/Staging/ParcelsWithOwnership_Staging/MapServer/3",
+    "LayerFields": [ "NAME" ],
+    "TableFields": [
+      "BOOK",
+      "PAGE",
+      "FULLNAME",
+      "Second_Owner_Name",
+      "MAILINGADDRESS",
+      "CITY",
+      "STATE",
+      "a_account",
+      "DESCRIPTION",
+      "DESCRIPTION2",
+      "DESCRIPTION3",
+      "LUC",
+      "SCHOOL",
+      "MUNI",
+      "CAP",
+      "APRBLDG",
+      "APRLAND",
+      "PINWASSEMENTUNIT",
+      "PIN",
+      "ZIPCODE",
+      "FRONTFOOT",
+      "DEPTH",
+      "IRREGULAR",
+      "SCALED",
+      "FLOOD",
+      "FIRE",
+      "COUNCILMAN"
+    ],
+    "PrintElements": [
+      {
+        "FieldName": "PINWASSEMENTUNIT",
+        "PrintElement": "PINwUnit"
+      },
+      {
+        "FieldName": "BOOK",
+        "PrintElement": "Book"
+      },
+      {
+        "FieldName": "FULLNAME",
+        "PrintElement": "OwnerName"
+      },
+      {
+        "FieldName": "MAILINGADDRESS",
+        "PrintElement": "MailingAddress"
+      },
+      {
+        "FieldName": "CITY",
+        "PrintElement": "City"
+      },
+      {
+        "FieldName": "STATE",
+        "PrintElement": "State"
+      },
+      {
+        "FieldName": "DESCRIPTION",
+        "PrintElement": "Description"
+      },
+      {
+        "FieldName": "DESCRIPTION2",
+        "PrintElement": "Description 2"
+      },
+      {
+        "FieldName": "DESCRIPTION3",
+        "PrintElement": "Description 3"
+      },
+      {
+        "FieldName": "LANDUSE",
+        "PrintElement": "LandCode"
+      }
+    ],
+    "RelationshipId": 0,
+    "Options": [
+      {
+        "Label": "Tax ID",
+        "SearchType": "layer",
+        "FieldName": "Name",
+        "Id": "taxid"
+      },
+      {
+        "Label": "Owner Name",
+        "SearchType": "table",
+        "FieldName": "FULLNAME",
+        "Id": "owner"
+      }
+    ]
+  },
+  "LegendGroups": [
+    {
+      "GroupName": "Addresses/Parcels",
+      "GroupOrder": 1,
+      "LayerIds": [ 6, 8, 7, 9, 40 ]
+    },
+    {
+      "GroupName": "Zoning",
+      "GroupOrder": 2,
+      "LayerIds": [ 35, 34, 49, 50, 51]
+
+    },
+    {
+      "GroupName": "County Districts",
+      "GroupOrder": 3,
+      "LayerIds": [ 12, 13, 16, 46, 47, 14, 15 ]
+    },
+    {
+      "GroupName": "Schools/Libraries",
+      "GroupOrder": 4,
+      "LayerIds": [52, 53, 54, 55]
+    },
+    {
+      "GroupName": "Hydrology",
+      "GroupOrder": 5,
+      "LayerIds": [ 41, 42, 5, 48, 56, 57, 58, 59, 60]
+    },
+    {
+      "GroupName": "Tax Index",
+      "GroupOrder": 6,
+      "LayerIds": [ 17, 18, 19, 20, 43, 44, 45 ]
+    },
+    {
+      "GroupName": "Transportation",
+      "GroupOrder": 7,
+      "LayerIds": [ 11, 61, 62]
+    },
+    {
+      "GroupName": "Statewide",
+      "GroupOrder": 8,
+      "LayerIds": [ 63, 64, 65, 66, 67]
+    }
+  ],
+  "Services": [
+
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/County_Layers/WatershedsLayers/MapServer",
+      "LoadOrder": 4,
+      "Layers": [
+        {
+          "Id": 5,
+          "LayerId": 0,
+          "Name": "Watersheds",
+          "Queryable": false,
+          "Visible": false,
+          "ShowSubLayers": true
+        }
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/PlanningAndZoning/Zoning/MapServer",
+      "LoadOrder": 5,
+      "Layers": [
+        {
+          "Name": "Dimensions",
+          "Id": 34,
+          "LayerId": 0,
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Name": "Zoning",
+          "Id": 35,
+          "LayerId": 1,
+          "Queryable": false,
+          "Visible": false
+        }
+
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/Assessment/TaxIndex/MapServer",
+      "LoadOrder": 6,
+      "Layers": [
+        {
+          "Id": 17,
+          "Name": "Hundred Boundaries",
+          "LayerId": 0,
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 18,
+          "Name": "District Boundaries",
+          "LayerId": 1,
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 19,
+          "Name": "Map Grid",
+          "LayerId": 2,
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 20,
+          "Name": "Map Index",
+          "LayerId": 3,
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/County_Layers/SanitarySewerDistricts/MapServer",
+      "LoadOrder": 7,
+      "Layers": [
+        {
+          "Id": 16,
+          "Name": "Sanitary Sewer Districts",
+          "LayerId": 0,
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/Districts/MapServer",
+      "LoadOrder": 8,
+      "Layers": [
+        {
+          "Id": 12,
+          "Name": "Zip Codes",
+          "LayerId": 0,
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 13,
+          "Name": "Fire Districts",
+          "LayerId": 1,
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 14,
+          "Name": "County Council Districts",
+          "LayerId": 2,
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 15,
+          "Name": "County Boundary",
+          "LayerId": 3,
+          "Queryable": false,
+          "Visible": true
+        }
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/County_Layers/Roads/MapServer",
+      "LoadOrder": 3,
+      "Layers": [
+        {
+          "Id": 11,
+          "LayerId": 0,
+          "Name": "Streets",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/Staging/ParcelsWithOwnership_Staging/MapServer",
+      "LoadOrder": 1,
+      "Layers": [
+        {
+          "Id": 7,
+          "LayerId": 0,
+          "Name": "Parcels",
+          "Queryable": true,
+          "Visible": true,
+          "IsDefaultExtent": true,
+          "Relationships": [
+            {
+              "RelationshipName": "OwnershipInformation",
+              "Fields": [
+                "BOOK",
+                "PAGE",
+                "FULLNAME",
+                "Second_Owner_Name",
+                "MAILINGADDRESS",
+                "CITY",
+                "STATE",
+                "a_account",
+                "DESCRIPTION",
+                "DESCRIPTION2",
+                "DESCRIPTION3",
+                "LUC",
+                "SCHOOL",
+                "MUNI",
+                "CAP",
+                "APRBLDG",
+                "APRLAND",
+                "PINWASSEMENTUNIT",
+                "PIN",
+                "ZIPCODE",
+                "FRONTFOOT",
+                "DEPTH",
+                "IRREGULAR",
+                "SCALED",
+                "FLOOD",
+                "FIRE",
+                "COUNCILMAN"
+              ]
+            }
+          ]
+        },
+        {
+          "Id": 8,
+          "LayerId": 1,
+          "Name": "Parcel Labels",
+          "Queryable": false,
+          "Visible": true
+        },
+        {
+          "Id": 9,
+          "LayerId": 2,
+          "Name": "Annotation",
+          "Queryable": false,
+          "Visible": true
+        }
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/County_Layers/911Addresses/MapServer",
+      "LoadOrder": 2,
+      "Layers": [
+        {
+          "Id": 6,
+          "LayerId": 0,
+          "Name": "911 Addresses",
+          "Queryable": false,
+          "Visible": true
+        }
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/County_Layers/Subdivisions/MapServer",
+      "LoadOrder": 9,
+      "Layers": [
+        {
+          "Id": 40,
+          "LayerId": 0,
+          "Name": "Subdivisions",
+          "Queryable": true,
+          "Visible": true
+
+        }
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/County_Layers/FloodZonesJune2018/MapServer",
+      "LoadOrder": 10,
+      "Layers": [
+        {
+          "Id": 41,
+          "LayerId": 0,
+          "Name": "Flood Zones EFFECTIVE JUNE 2018",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/County_Layers/FEMA2018FIRMPanels/MapServer",
+      "LoadOrder": 11,
+      "Layers": [
+        {
+          "Id": 42,
+          "LayerId": 0,
+          "Name": "FEMA FIRM Panels EFFECTIVE JUNE 2018",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/Assessment/TaxDitch/MapServer",
+      "LoadOrder": 12,
+      "Layers": [
+        {
+          "Id": 43,
+          "LayerId": 0,
+          "Name": "Tax Ditch Segments",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 44,
+          "LayerId": 1,
+          "Name": "Tax Ditch Areas",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 45,
+          "LayerId": 2,
+          "Name": "Tax Ditch Max ROWs",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/Engineering/sewer_tiers/MapServer",
+      "LoadOrder": 13,
+      "Layers": [
+        {
+          "Id": 46,
+          "LayerId": 0,
+          "Name": "Sewer Tiers",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/County_Layers/SussexCountyWaterDistricts/MapServer",
+      "LoadOrder": 14,
+      "Layers": [
+        {
+          "Id": 47,
+          "LayerId": 0,
+          "Name": "Sussex County Water Districts",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://maps.sussexcountyde.gov/gis/rest/services/PlanningAndZoning/GMZ/MapServer",
+      "LoadOrder": 15,
+      "Layers": [
+        {
+          "Id": 48,
+          "LayerId": 0,
+          "Name": "County Groundwater Management Zones",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://firstmap.delaware.gov/arcgis/rest/services/PlanningCadastre/DE_AgLandsPreservation/MapServer",
+      "LoadOrder": 16,
+      "Layers": [
+        {
+          "Id": 49,
+          "LayerId": 0,
+          "Name": "Young Farmers Loan",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 50,
+          "LayerId": 1,
+          "Name": "Forest Land Preservation",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 51,
+          "LayerId": 2,
+          "Name": "Ag Preservation Districts",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://firstmap.gis.delaware.gov/arcgis/rest/services/Society/DE_Schools/MapServer",
+      "LoadOrder": 17,
+      "Layers": [
+        {
+          "Id": 52,
+          "LayerId": 0,
+          "Name": "Public Schools",
+          "Queryable": false,
+          "Visible": false,
+          "Fields":
+              [
+                  "NAME",
+                  "ADDRESS",
+                  "GRADESPAN",
+                  "DISTRICT",
+                  "SCHOOL_URL"
+              ]
+        }
+      ]
+    },
+    {
+      "Url": "https://firstmap.gis.delaware.gov/arcgis/rest/services/Society/DE_Libraries/MapServer",
+      "LoadOrder": 18,
+      "Layers": [
+        {
+          "Id": 53,
+          "LayerId": 0,
+          "Name": "Libraries",
+          "Queryable": false,
+          "Visible": false,
+          "Fields":
+              [
+                  "NAME",
+                  "STREETADD",
+                  "CITY",
+                  "STATE",
+                  "ZIPCODE",
+                  "URL"
+              ]
+        }
+      ]
+    },
+    {
+      "Url": "https://firstmap.delaware.gov/arcgis/rest/services/Boundaries/DE_SchoolDistricts/MapServer",
+      "LoadOrder": 19,
+      "Layers": [
+        {
+          "Id": 54,
+          "LayerId": 0,
+          "Name": "School Districts",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 55,
+          "LayerId": 1,
+          "Name": "VoTech School Districts",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Wetlands/MapServer",
+      "LoadOrder": 20,
+      "Layers": [
+        {
+          "Id": 56,
+          "LayerId": 1,
+          "Name": "Head of Tide Wetlands 2007",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_GroundwaterManagementZones/MapServer",
+      "LoadOrder": 21,
+      "Layers": [
+        {
+          "Id": 57,
+          "LayerId": 0,
+          "Name": "Groundwater Management Zones",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://firstmap.delaware.gov/arcgis/rest/services/BaseMap/DE_Basemap/MapServer",
+      "LoadOrder": 22,
+      "Layers": [
+        {
+          "Id": 58,
+          "LayerId": 7,
+          "Name": "Streams",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 59,
+          "LayerId": 6,
+          "Name": "Major Rivers",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 60,
+          "LayerId": 8,
+          "Name": "Lakes, Ponds, Bays",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 61,
+          "LayerId": 2,
+          "Name": "Major Routes",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 62,
+          "LayerId": 4,
+          "Name": "Railroads",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 63,
+          "LayerId": 12,
+          "Name": "Geographic Names",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 64,
+          "LayerId": 11,
+          "Name": "Publically Protected Land",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 65,
+          "LayerId": 9,
+          "Name": "Contours",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 66,
+          "LayerId": 10,
+          "Name": "Municipalities",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 67,
+          "LayerId": 13,
+          "Name": "Communities",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    }
+],
+  "Symbols": {
+    "SelectedPointSymbol": {
+      "color": [
+        255,
+        255,
+        0,
+        130
+      ],
+      "size": 18,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriSMS",
+      "style": "esriSMSCircle",
+      "outline": {
+        "color": [
+          0,
+          0,
+          0,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      }
+    },
+    "SelectedLineSymbol": {
+      "color": [
+        255,
+        255,
+        0,
+        128
+      ],
+      "width": 2,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "SelectedPolygonSymbol": {
+      "color": [
+        255,
+        255,
+        0,
+        255
+      ],
+      "outline": {
+        "color": [
+          255,
+          255,
+          0,
+          255
+        ],
+        "width": 4,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSNull"
+    },
+    "ResultSetPointSymbol": {
+      "color": [
+        0,
+        0,
+        255,
+        125
+      ],
+      "size": 12,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriSMS",
+      "style": "esriSMSSquare",
+      "outline": {
+        "color": [
+          0,
+          0,
+          0,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      }
+    },
+    "ResultSetLineSymbol": {
+      "color": [
+        0,
+        0,
+        255,
+        128
+      ],
+      "width": 2,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "ResultSetPolygonSymbol": {
+      "color": [
+        0,
+        0,
+        255,
+        255
+      ],
+      "outline": {
+        "color": [
+          0,
+          0,
+          255,
+          255
+        ],
+        "width": 3,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSNull"
+    }
+  }
+
+}

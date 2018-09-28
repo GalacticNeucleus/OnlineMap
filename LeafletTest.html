@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="Scripts/leaflettest.js"></script>
+    <!--<script src="Scripts/leaflet-select.js"></script>-->
+    <script src="node_modules/leaflet-area-select/dist/Map.SelectArea.js"></script>
+</head>
+<body>
+    <div style="height:100px; width:100%; background-color:yellow">
+        <input type="checkbox" data-layer="MUNIS_LL" id="chkMunis" class="layerCheckbox" checked />
+        <label for="chkMunis">Municipalities</label>
+        <input type="checkbox" id="chkRoads" data-layer="ROADS_LL" class="layerCheckbox" checked/>
+        <label for="chkRoads">Roads</label>
+
+        <input type="checkbox" id="chkPoints" data-layer="POINTS_LL" class="layerCheckbox" checked />
+        <label for="chkPoints">Points</label>
+    </div>
+    <div id="mapDiv" style="height:500px; width:80%">
+
+    </div>
+</body>
+</html>
