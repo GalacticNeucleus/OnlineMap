@@ -637,24 +637,24 @@ span[widgetID='btnIdentify'] {
 /********************
 *   Mobile Styles   *
 ********************/
-@media only screen and (max-width: 1220px) {
-    #SussexCoLogo {
-        width: 312px;
-        /*background-position: -105px 0;*/
-    }
-}
+/* @media only screen and (max-width: 1220px) { */
+    /* #SussexCoLogo { */
+        /* width: 312px; */
+        /* /*background-position: -105px 0;*/ */
+    /* } */
+/* } */
 
-@media only screen and (max-width: 1060px) {
-    #SussexCoLogo {
-        width: 211px;
-        background-position: 0 9px;
-        background-size: 100% auto;
-    }
+/* @media only screen and (max-width: 1060px) { */
+    /* #SussexCoLogo { */
+        /* width: 211px; */
+        /* background-position: 0 9px; */
+        /* background-size: 100% auto; */
+    /* } */
 
-    .tundra .dijitIcon {
-        margin-left: 4px;
-    }
-}
+    /* .tundra .dijitIcon { */
+        /* margin-left: 4px; */
+    /* } */
+/* } */
 
 
 /* New Style */
@@ -1042,145 +1042,145 @@ ul {
 
 
 /* Media Queries */
-@media only screen and (max-width: 824px) {
-    /* Tags */
-    header {
-        height: 60px;
-    }
+/* @media only screen and (max-width: 824px) { */
+    /* /* Tags */ */
+    /* header { */
+        /* height: 60px; */
+    /* } */
 
-    /* Classes */
-    .full-width-mobile {
-        width: 100%;
-    }
+    /* /* Classes */ */
+    /* .full-width-mobile { */
+        /* width: 100%; */
+    /* } */
 
-    .hide-mobile {
-        display: none !important;
-    }
+    /* .hide-mobile { */
+        /* display: none !important; */
+    /* } */
 
-    .show-mobile {
-        display: block;
-    }
+    /* .show-mobile { */
+        /* display: block; */
+    /* } */
 
-    .widget {
-        left: 0;
-    }
+    /* .widget { */
+        /* left: 0; */
+    /* } */
 
-    /* ID */
-    #header-functions {
-        right: 10px;
-        top: -10px;
-    }
+    /* /* ID */ */
+    /* #header-functions { */
+        /* right: 10px; */
+        /* top: -10px; */
+    /* } */
 
-    #header-functions li {
-      display: inline-block;
-      margin-right: 1em;
-      position: relative;
-      top: .7em;
-      /* height: 100%; */
-  }
+    /* #header-functions li { */
+      /* display: inline-block; */
+      /* margin-right: 1em; */
+      /* position: relative; */
+      /* top: .7em; */
+      /* /* height: 100%; */ */
+  /* } */
 
-        #header-functions .button {
-            background: none;
-            font-size: 3em;
-            width: 0;
-        }
+        /* #header-functions .button { */
+            /* background: none; */
+            /* font-size: 3em; */
+            /* width: 0; */
+        /* } */
 
-    #mapDiv {
-        height: calc(100% - 60px);
-    }
+    /* #mapDiv { */
+        /* height: calc(100% - 60px); */
+    /* } */
 
-    #divNavigation {
-        left: 141px;
-        top: 78px;
-    }
+    /* #divNavigation { */
+        /* left: 141px; */
+        /* top: 78px; */
+    /* } */
 
-    #map-functions {
-        left: 2%;
-        top: 75px;
-        width: 88%;
-    }
+    /* #map-functions { */
+        /* left: 2%; */
+        /* top: 75px; */
+        /* width: 88%; */
+    /* } */
 
-        #map-functions ul li > button, #map-functions ul li > .button {
-            font-size: 27px;
-            width: 32px;
-            padding: .25em .25em 0 .25em;
-        }
+        /* #map-functions ul li > button, #map-functions ul li > .button { */
+            /* font-size: 27px; */
+            /* width: 32px; */
+            /* padding: .25em .25em 0 .25em; */
+        /* } */
 
-        #map-functions .button {
-            padding: .25em .25em .15em;
-        }
+        /* #map-functions .button { */
+            /* padding: .25em .25em .15em; */
+        /* } */
 
-        #map-functions .icon-basemap:before {
-            margin-left: 3px;
-        }
+        /* #map-functions .icon-basemap:before { */
+            /* margin-left: 3px; */
+        /* } */
 
-#basemapGallery, #basemapGalleryContainer {
-        height: 50vh !important;
-        overflow-y: scroll;
-    }
-    #layerVisibility {
-        /* height: 60vh !important; */
-        /* width: 50vh; */
-        overflow-y: scroll;
-    }
-    #basemapGallery, #basemapGalleryContainer {
-        width: 245px;
-    }
+/* #basemapGallery, #basemapGalleryContainer { */
+        /* height: 50vh !important; */
+        /* overflow-y: scroll; */
+    /* } */
+    /* #layerVisibility { */
+        /* /* height: 60vh !important; */ */
+        /* /* width: 50vh; */ */
+        /* overflow-y: scroll; */
+    /* } */
+    /* #basemapGallery, #basemapGalleryContainer { */
+        /* width: 245px; */
+    /* } */
 
-    #search-results {
-        display: none;
-        background: rgb(255, 255, 255) !important;
-        height: calc(100% - 65px);
-        top: 75px;
-        width: 95vw;
-        overflow-y: scroll !important;
-    }
+    /* #search-results { */
+        /* display: none; */
+        /* background: rgb(255, 255, 255) !important; */
+        /* height: calc(100% - 65px); */
+        /* top: 75px; */
+        /* width: 95vw; */
+        /* overflow-y: scroll !important; */
+    /* } */
 
-                    #search-results #divApplicationDetails {
-                        overflow-y: scroll !important;
-                    }
+                    /* #search-results #divApplicationDetails { */
+                        /* overflow-y: scroll !important; */
+                    /* } */
 
-    #searchResultsBtn icon-info{
-        top: 110px !important;
-    }
+    /* #searchResultsBtn icon-info{ */
+        /* top: 110px !important; */
+    /* } */
     
-    #searchResultsBtn {
-        top: 75px;
-        font-size: 28px;
-        padding: .25em;
-    }
+    /* #searchResultsBtn { */
+        /* top: 75px; */
+        /* font-size: 28px; */
+        /* padding: .25em; */
+    /* } */
 
 
-    #divNavigation .dijitButtonNode {
-        font-size: 27px;
-        padding: 0 .2em .3em .3em;
-    }
+    /* #divNavigation .dijitButtonNode { */
+        /* font-size: 27px; */
+        /* padding: 0 .2em .3em .3em; */
+    /* } */
 
-    #disclaimer .dijitDialogPaneContent  {
-        height: 360px !important;
-    }
+    /* #disclaimer .dijitDialogPaneContent  { */
+        /* height: 360px !important; */
+    /* } */
 
 
-    #disclaimer {
-        height: 370px !important;
-        width: 320px !important;
-        /*margin-left: -160px !important;
-        margin-bottom: 35px;*/
-        margin: auto !important;
-        z-index: 999 !important;
-    }
+    /* #disclaimer { */
+        /* height: 370px !important; */
+        /* width: 320px !important; */
+        /* /*margin-left: -160px !important; */
+        /* margin-bottom: 35px;*/ */
+        /* margin: auto !important; */
+        /* z-index: 999 !important; */
+    /* } */
 
-        #disclaimer p {
-            height: 180px;
-            overflow-y: scroll;
-        }
+        /* #disclaimer p { */
+            /* height: 180px; */
+            /* overflow-y: scroll; */
+        /* } */
 
-    .esriLargeSliderTL {
-        top: 75px;
-    }
+    /* .esriLargeSliderTL { */
+        /* top: 75px; */
+    /* } */
 
-    .dijitContentPane {
-        width: 100% !important;
-        /* height: 100% !important; */
-    }
-}
+    /* .dijitContentPane { */
+        /* width: 100% !important; */
+        /* /* height: 100% !important; */ */
+    /* } */
+/* } */
