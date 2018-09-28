@@ -33,6 +33,10 @@
       "TemplateName": "Letter Portrait Parcel Details"
     }
   ],
+  "AddressLocatorSearchConfiguration": {
+    "LocatorUrl": "https://firstmap.gis.delaware.gov/arcgis/rest/services/Location/DE_CompositeLocator/GeocodeServer",
+    "SingleLineFieldName": "SingleLine"
+  },
   "AddressLayerSearchConfiguration": {
     "Url": "https://maps.sussexcountyde.gov/gis/rest/services/County_Layers/911Addresses/MapServer/0",
     "SearchFieldName": "Address",
@@ -157,7 +161,7 @@
     {
       "GroupName": "Zoning",
       "GroupOrder": 2,
-      "LayerIds": [ 35, 34 ]
+      "LayerIds": [ 35, 34, 49, 50, 51]
 
     },
     {
@@ -168,12 +172,12 @@
     {
       "GroupName": "Schools/Libraries",
       "GroupOrder": 4,
-      "LayerIds": []
+      "LayerIds": [52, 53, 54, 55]
     },
     {
       "GroupName": "Hydrology",
       "GroupOrder": 5,
-      "LayerIds": [41, 42, 5 , 48]
+      "LayerIds": [ 41, 42, 5, 48, 56, 57, 58, 59, 60]
     },
     {
       "GroupName": "Tax Index",
@@ -183,12 +187,12 @@
     {
       "GroupName": "Transportation",
       "GroupOrder": 7,
-      "LayerIds": [ 11]
+      "LayerIds": [ 11, 61, 62]
     },
     {
       "GroupName": "Statewide",
       "GroupOrder": 8,
-      "LayerIds": []
+      "LayerIds": [ 63, 64, 65, 66, 67]
     }
   ],
   "Services": [
@@ -410,7 +414,6 @@
 
         }
       ]
-
     },
     {
       "Url": "https://maps.sussexcountyde.gov/gis/rest/services/County_Layers/FloodZonesJune2018/MapServer",
@@ -503,8 +506,200 @@
           "Visible": false
         }
       ]
+    },
+    {
+      "Url": "https://firstmap.delaware.gov/arcgis/rest/services/PlanningCadastre/DE_AgLandsPreservation/MapServer",
+      "LoadOrder": 16,
+      "Layers": [
+        {
+          "Id": 49,
+          "LayerId": 0,
+          "Name": "Young Farmers Loan",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 50,
+          "LayerId": 1,
+          "Name": "Forest Land Preservation",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 51,
+          "LayerId": 2,
+          "Name": "Ag Preservation Districts",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://firstmap.gis.delaware.gov/arcgis/rest/services/Society/DE_Schools/MapServer",
+      "LoadOrder": 17,
+      "Layers": [
+        {
+          "Id": 52,
+          "LayerId": 0,
+          "Name": "Public Schools",
+          "Queryable": false,
+          "Visible": false,
+          "Fields":
+              [
+                  "NAME",
+                  "ADDRESS",
+                  "GRADESPAN",
+                  "DISTRICT",
+                  "SCHOOL_URL"
+              ]
+        }
+      ]
+    },
+    {
+      "Url": "https://firstmap.gis.delaware.gov/arcgis/rest/services/Society/DE_Libraries/MapServer",
+      "LoadOrder": 18,
+      "Layers": [
+        {
+          "Id": 53,
+          "LayerId": 0,
+          "Name": "Libraries",
+          "Queryable": false,
+          "Visible": false,
+          "Fields":
+              [
+                  "NAME",
+                  "STREETADD",
+                  "CITY",
+                  "STATE",
+                  "ZIPCODE",
+                  "URL"
+              ]
+        }
+      ]
+    },
+    {
+      "Url": "https://firstmap.delaware.gov/arcgis/rest/services/Boundaries/DE_SchoolDistricts/MapServer",
+      "LoadOrder": 19,
+      "Layers": [
+        {
+          "Id": 54,
+          "LayerId": 0,
+          "Name": "School Districts",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 55,
+          "LayerId": 1,
+          "Name": "VoTech School Districts",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Wetlands/MapServer",
+      "LoadOrder": 20,
+      "Layers": [
+        {
+          "Id": 56,
+          "LayerId": 1,
+          "Name": "Head of Tide Wetlands 2007",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_GroundwaterManagementZones/MapServer",
+      "LoadOrder": 21,
+      "Layers": [
+        {
+          "Id": 57,
+          "LayerId": 0,
+          "Name": "Groundwater Management Zones",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
+    },
+    {
+      "Url": "https://firstmap.delaware.gov/arcgis/rest/services/BaseMap/DE_Basemap/MapServer",
+      "LoadOrder": 22,
+      "Layers": [
+        {
+          "Id": 58,
+          "LayerId": 7,
+          "Name": "Streams",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 59,
+          "LayerId": 6,
+          "Name": "Major Rivers",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 60,
+          "LayerId": 8,
+          "Name": "Lakes, Ponds, Bays",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 61,
+          "LayerId": 2,
+          "Name": "Major Routes",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 62,
+          "LayerId": 4,
+          "Name": "Railroads",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 63,
+          "LayerId": 12,
+          "Name": "Geographic Names",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 64,
+          "LayerId": 11,
+          "Name": "Publically Protected Land",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 65,
+          "LayerId": 9,
+          "Name": "Contours",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 66,
+          "LayerId": 10,
+          "Name": "Municipalities",
+          "Queryable": false,
+          "Visible": false
+        },
+        {
+          "Id": 67,
+          "LayerId": 13,
+          "Name": "Communities",
+          "Queryable": false,
+          "Visible": false
+        }
+      ]
     }
-  ],
+],
   "Symbols": {
     "SelectedPointSymbol": {
       "color": [

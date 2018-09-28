@@ -1,4 +1,4 @@
-﻿
+
 @font-face {
     font-family: 'icomoon';
     src: url('fonts/icomoon.eot?o57ax4');
@@ -580,7 +580,7 @@ span[widgetID='btnIdentify'] {
 
 .dgrid {
     background-color: #fff;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .dgrid-content {
@@ -640,7 +640,7 @@ span[widgetID='btnIdentify'] {
 /* @media only screen and (max-width: 1220px) { */
     /* #SussexCoLogo { */
         /* width: 312px; */
-        /* /*background-position: -105px 0;*/ */
+
     /* } */
 /* } */
 
@@ -802,7 +802,7 @@ ul {
 
      #search-results #divApplicationDetails {
         /* height: 800px; */
-         height: calc(100% - 200px) !important;
+         height: calc(100% - 200px);
     } 
 
     #search-results #close-results {
@@ -831,8 +831,13 @@ ul {
 #basemapGallery, #basemapGalleryContainer {
     width: 365px;
 }
+#layerVisibility.widget h2 {
 
+border-left: 2px solid #808080 !important;
+}
 #layerVisibility.widget {
+    background: none !important;
+    border: none !important;
     font-size: .75em;
     display: block;
     visibility: hidden;
@@ -842,6 +847,7 @@ ul {
 #layerVisibility.visible {
     display: block;
     visibility: visible;
+    /* border-right: 2px solid #808080 !important; */
 }
 
     #layerVisibility.visible #divLayerVisibility {
@@ -926,6 +932,14 @@ ul {
     #divLayerVisibility .dgrid-row {
         position: relative;
     }
+    #divLayerVisibility.dgrid{
+        
+border: 1px solid #ddd;
+        
+/* border-bottom: 1px solid #808080; */
+        
+padding-right: 0px !important;
+    }
 
     #divLayerVisibility .divLayerVisibility-header .dgrid-cell-padding {
         font-size: 1.5em;
@@ -991,9 +1005,9 @@ ul {
 
 /*Disclaimer*/
 #disclaimer {
-    width: 500px !important;
-    /*left: 50% !important;*/
-    /*top: 50% !important;*/
+    width: 500px ;
+    left: unset !important;
+    /* top: 10% !important; */
     /*margin-left: -250px !important;*/
     margin-top: auto;
 }
@@ -1038,52 +1052,57 @@ ul {
     background: #777;
 }
 
+.esriControlsBR {
+    display: none !important;
+
+}
+
 
 
 
 /* Media Queries */
-/* @media only screen and (max-width: 824px) { */
-    /* /* Tags */ */
+@media only screen and (max-width: 824px) {
+  
     /* header { */
         /* height: 60px; */
     /* } */
 
-    /* /* Classes */ */
+ 
     /* .full-width-mobile { */
         /* width: 100%; */
     /* } */
+    .hide-mobile { 
+        display: none !important; 
+     } 
 
-    /* .hide-mobile { */
-        /* display: none !important; */
-    /* } */
+     .show-mobile { 
+         display: block; 
+     } 
 
-    /* .show-mobile { */
-        /* display: block; */
-    /* } */
 
-    /* .widget { */
-        /* left: 0; */
-    /* } */
+    .widget {
+        left: 0px;
+    }
 
-    /* /* ID */ */
-    /* #header-functions { */
-        /* right: 10px; */
-        /* top: -10px; */
-    /* } */
+  
+    #header-functions {
+        right: 10px;
+        top: -10px;
+    }
 
-    /* #header-functions li { */
+    #header-functions li {
       /* display: inline-block; */
       /* margin-right: 1em; */
       /* position: relative; */
-      /* top: .7em; */
-      /* /* height: 100%; */ */
-  /* } */
+      top: .7em;
+   
+  }
 
-        /* #header-functions .button { */
-            /* background: none; */
-            /* font-size: 3em; */
-            /* width: 0; */
-        /* } */
+        #header-functions .button {
+            background: none;
+            font-size: 3em;
+            width: 0;
+        }
 
     /* #mapDiv { */
         /* height: calc(100% - 60px); */
@@ -1094,61 +1113,56 @@ ul {
         /* top: 78px; */
     /* } */
 
-    /* #map-functions { */
-        /* left: 2%; */
-        /* top: 75px; */
-        /* width: 88%; */
-    /* } */
+    #map-functions {
+        left: 2%;
+        top: 75px;
+        width: 88%;
+    }
 
-        /* #map-functions ul li > button, #map-functions ul li > .button { */
-            /* font-size: 27px; */
-            /* width: 32px; */
-            /* padding: .25em .25em 0 .25em; */
-        /* } */
+        #map-functions ul li > button, #map-functions ul li > .button {
+            font-size: 27px;
+            width: 32px;
+            padding: .25em .25em 0 .25em;
+        }
 
-        /* #map-functions .button { */
-            /* padding: .25em .25em .15em; */
-        /* } */
+        #map-functions .button {
+            padding: .25em .25em .15em;
+        }
 
-        /* #map-functions .icon-basemap:before { */
-            /* margin-left: 3px; */
-        /* } */
+        #map-functions .icon-basemap:before {
+            margin-left: 3px;
+        }
 
-/* #basemapGallery, #basemapGalleryContainer { */
-        /* height: 50vh !important; */
-        /* overflow-y: scroll; */
-    /* } */
-    /* #layerVisibility { */
-        /* /* height: 60vh !important; */ */
-        /* /* width: 50vh; */ */
-        /* overflow-y: scroll; */
-    /* } */
-    /* #basemapGallery, #basemapGalleryContainer { */
-        /* width: 245px; */
-    /* } */
+#basemapGallery, #basemapGalleryContainer {
+        height: 50vh !important;
+        width: 245px;
+        overflow-y: scroll;
+    }
 
-    /* #search-results { */
+
+
+    #search-results {
         /* display: none; */
-        /* background: rgb(255, 255, 255) !important; */
-        /* height: calc(100% - 65px); */
-        /* top: 75px; */
-        /* width: 95vw; */
+        background: rgb(255, 255, 255) !important;
+        height: calc(100% - 65px);
+        top: 75px;
+        width: 55vw;
         /* overflow-y: scroll !important; */
-    /* } */
+    }
 
-                    /* #search-results #divApplicationDetails { */
-                        /* overflow-y: scroll !important; */
-                    /* } */
+                    #search-results #divApplicationDetails {
+                        overflow-y: scroll !important;
+                    }
 
-    /* #searchResultsBtn icon-info{ */
-        /* top: 110px !important; */
-    /* } */
+    #searchResultsBtn icon-info{
+        top: 110px !important;
+    }
     
-    /* #searchResultsBtn { */
+    #searchResultsBtn {
         /* top: 75px; */
-        /* font-size: 28px; */
-        /* padding: .25em; */
-    /* } */
+        font-size: 28px;
+        padding: .25em;
+    }
 
 
     /* #divNavigation .dijitButtonNode { */
@@ -1161,26 +1175,131 @@ ul {
     /* } */
 
 
-    /* #disclaimer { */
+     #disclaimer {
         /* height: 370px !important; */
-        /* width: 320px !important; */
+        width: 320px;
         /* /*margin-left: -160px !important; */
-        /* margin-bottom: 35px;*/ */
-        /* margin: auto !important; */
-        /* z-index: 999 !important; */
-    /* } */
+        /* margin-bottom: 35px;*/
+        margin: auto !important;
+        z-index: 999 !important;
+    }
 
-        /* #disclaimer p { */
-            /* height: 180px; */
-            /* overflow-y: scroll; */
-        /* } */
+        #disclaimer p {
+            height: 180px;
+            overflow-y: scroll;
+        }
 
-    /* .esriLargeSliderTL { */
-        /* top: 75px; */
-    /* } */
+    .esriLargeSliderTL {
+        display: none !important;
+    }
 
     /* .dijitContentPane { */
         /* width: 100% !important; */
-        /* /* height: 100% !important; */ */
-    /* } */
-/* } */
+ 
+    /* } */ 
+}
+
+@media only screen and (max-height: 575.98px ), (max-width: 575.98px ) {
+
+    #disclaimer {
+        height: 100vmin !important; 
+        width: 100vmin !important;
+        /* /*margin-left: -160px !important; */
+        /* margin-bottom: 35px;*/
+        left: 20% !important;
+
+    }
+    #disclaimer p {
+        height: 59vmin !important;
+        overflow-y: scroll !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .dijitDialogPaneContent {
+        font-size: .85em;
+        box-sizing: border-box;
+        height: 90vmin !important;
+        /* overflow: hidden !important; */
+    }
+    #disclaimer .dijitDialogPaneActionBar{
+        /* position: absolute !important; */
+    }
+
+     #search-results {
+        /* display: none;
+         background: rgb(255, 255, 255) !important; */
+        /* height: calc(100% - 65px);
+        top: 75px;  */
+        width: 100vw;
+        overflow-y: scroll !important;
+
+    } 
+
+}
+
+@media only screen and (max-width: 320px ) {
+
+    #disclaimer {
+        /* height: 100vmin !important; 
+        width: 100vmin !important; */
+        /* /*margin-left: -160px !important; */
+        /* margin-bottom: 35px;*/
+        left: 0px !important;
+
+    }
+    #layerVisibility, .widget {
+        left: -2% !important;
+    }
+
+
+
+
+}
+
+@media only screen and (max-height: 320px ) { 
+    #layerVisibility.widget {
+         height: 55vh !important; 
+        /* width: 50vh; */
+        /* overflow-y: scroll; */
+   }
+
+   #search-results h2 {
+    background: #f3f3f3;
+    font-size: .8em;
+    font-weight: normal;
+    margin: 0;
+    padding: .25em;
+    overflow: auto;
+}
+
+
+#search-results {
+    /* display: none; */
+     /* background: rgb(255, 255, 255) !important; */
+    height: 100vmin;
+    top: 0px; 
+    width: 100vw;
+    overflow-y: scroll !important;
+
+}
+
+#search-results #close-results {
+    cursor: pointer;
+    margin: -.25em -.25em 0 -.25em;
+    padding: .1em;
+    text-align: right;
+}
+#search-results #divApplicationDetails {
+    /* height: 800px; */
+    height: 55vh;
+}
+
+#spanSelectedApplications {
+    /* margin-top: 3px;
+    font-weight: normal; */
+    font-size: .8em;
+    /* color: #5a5a5a; */
+}
+
+
+}
