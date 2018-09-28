@@ -157,7 +157,7 @@ header {
 
 button, .button {
     background: #D67E0A;
-    border-radius: 1px;
+    border-radius: 2px;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -434,6 +434,8 @@ a.button {
 
 #disclaimer p {
     height: 200px;
+    margin-top: .5em;
+    margin-bottom: .5em;
     overflow-y: scroll;
 }
 
@@ -768,7 +770,7 @@ ul {
     border: 1px solid #ccc; */
     box-sizing: border-box;
     height: calc(100% - 90px);
-    /*height: auto;*/
+    max-height: 950px;
     position: absolute;
     right: 0;
     top: 75px;
@@ -934,7 +936,7 @@ border-left: 2px solid #808080 !important;
     }
     #divLayerVisibility.dgrid{
         
-border: 1px solid #ddd;
+/* border: 1px solid #ddd; */
         
 /* border-bottom: 1px solid #808080; */
         
@@ -1006,7 +1008,7 @@ padding-right: 0px !important;
 /*Disclaimer*/
 #disclaimer {
     width: 500px ;
-    left: unset !important;
+    /* left: unset !important; */
     /* top: 10% !important; */
     /*margin-left: -250px !important;*/
     margin-top: auto;
