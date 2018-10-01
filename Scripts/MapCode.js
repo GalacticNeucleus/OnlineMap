@@ -410,7 +410,7 @@ require([
             console.log('widget button click');
             app.Map.enableMapNavigation();
             app.MapDraw.deactivate();
-            app.Map.enableKeyboardNavigation();
+            // app.Map.enableKeyboardNavigation();
             var isActive = $(this).hasClass('active');
             $('.widget, #divLayerVisibility').hide();
             console.log('removing active class widget-button clicked');
@@ -494,7 +494,7 @@ require([
 
 
         app.Map.on("load", function (loadArgs) {
-
+            app.Map.disableMapNavigation();
             //*****************************************this is the new way as of 3/2017
             loadJSON(function (response) {
                 //note service load order - b/c we group layers from different services, we cannot perfectly configure the loading order
