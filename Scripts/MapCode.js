@@ -46,14 +46,14 @@ require([
     "esri/dijit/Scalebar",
 //    "esri/dijit/OverviewMap",
     "esri/geometry/Extent",
-//    "esri/SpatialReference",
+    "esri/SpatialReference",
     "esri/arcgis/utils",
     "esri/tasks/GeometryService",
-//    "esri/tasks/ProjectParameters",
+    "esri/tasks/ProjectParameters",
     "esri/tasks/query",
     "esri/tasks/RelationshipQuery",
     "esri/tasks/QueryTask",
-//    "esri/geometry/webMercatorUtils",
+    "esri/geometry/webMercatorUtils",
     "esri/symbols/SimpleMarkerSymbol",
     "esri/symbols/SimpleLineSymbol",
     "esri/symbols/SimpleFillSymbol",
@@ -108,14 +108,14 @@ require([
         esriScalebar,
 //        esriOverviewMap,
         esriExtent,
-//        esriSpatialReference,
+        esriSpatialReference,
         esriUtils,
         esriGeometryService,
-//        esriProjectParameters,
+        esriProjectParameters,
         esriQuery,
         esriRelationshipQuery,
         esriQueryTask,
-//        esriWebMercatorUtils,
+        esriWebMercatorUtils,
         esriSimpleMarkerSymbol,
         esriSimpleLineSymbol,
         esriSimpleFillSymbol,
@@ -494,7 +494,7 @@ require([
 
 
         app.Map.on("load", function (loadArgs) {
-            app.Map.disableMapNavigation();
+            app.Map.disableKeyboardNavigation();
             //*****************************************this is the new way as of 3/2017
             loadJSON(function (response) {
                 //note service load order - b/c we group layers from different services, we cannot perfectly configure the loading order
@@ -781,11 +781,11 @@ require([
 
             });
 
-            dojoAspect.after(registry.byId("s-bar"), "resize", function () {
-                if (app.LayerGrid != null) {
-                    app.LayerGrid.resize();
-                }
-            })
+            // dojoAspect.after(registry.byId("s-bar"), "resize", function () {
+            //     if (app.LayerGrid != null) {
+            //         app.LayerGrid.resize();
+            //     }
+            // })
 
 
             function DoAddressLayerSearch(addressText) {

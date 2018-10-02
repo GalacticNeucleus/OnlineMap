@@ -1103,7 +1103,6 @@ padding-right: 0px !important;
 
     .widget {
         left: 0px;
-		top: 2vh !important;
     }
 
   
@@ -1126,9 +1125,9 @@ padding-right: 0px !important;
             width: 0;
         }
 
-     #mapdiv { 
-         height: calc(100vh - 60px) !important; 
-     } 
+    /* #mapDiv { */
+        /* height: calc(100% - 60px); */
+    /* } */
 
     /* #divNavigation { */
         /* left: 141px; */
@@ -1208,7 +1207,6 @@ padding-right: 0px !important;
 
         #disclaimer p {
             height: 180px;
-			max-height: 58vmin !important;
             overflow-y: scroll;
         }
 
@@ -1298,7 +1296,6 @@ padding-right: 0px !important;
 @media only screen and (max-height: 420px ) { 
     #layerVisibility.widget {
          height: 55vh !important; 
-		 top: 2vh !important;
         /* width: 50vh; */
         /* overflow-y: scroll; */
    }
