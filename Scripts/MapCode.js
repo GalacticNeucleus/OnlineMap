@@ -49,7 +49,7 @@ require([
     "esri/SpatialReference",
     "esri/arcgis/utils",
     "esri/tasks/GeometryService",
-    "esri/tasks/ProjectParameters",
+//    "esri/tasks/ProjectParameters",
     "esri/tasks/query",
     "esri/tasks/RelationshipQuery",
     "esri/tasks/QueryTask",
@@ -111,7 +111,7 @@ require([
         esriSpatialReference,
         esriUtils,
         esriGeometryService,
-        esriProjectParameters,
+//        esriProjectParameters,
         esriQuery,
         esriRelationshipQuery,
         esriQueryTask,
@@ -301,7 +301,8 @@ require([
 
         app.Map = new esriMap("mapDiv",
             {
-                zoom: 13,
+                zoom: 11,
+                center: [-75.368, 38.706],
                 basemap: "topo",
                 sliderStyle: "large"
             });
@@ -310,6 +311,15 @@ require([
             map: app.Map,
             scalebarUnit: "english"
         });
+
+        // function getCenter(){  
+        //     var centerLocation = map.extent.getCenter();  
+        //     console.log(centerLocation.getLatitude());  
+        //     console.log(centerLocation.getLongitude());  
+        //   }
+
+
+
 
 
         app.BasemapGallery = new esriBasemapGallery({
@@ -404,6 +414,8 @@ require([
 
 
         });
+
+
 
         //Widget Toggle
         $(".widget-button").on("click", function () {
